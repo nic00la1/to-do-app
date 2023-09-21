@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="to_do_app.MainPage">
+
+    <ScrollView>
+        <Grid Padding="16">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition Width="120" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="64" />
+                <RowDefinition Height="60" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Label FontSize="Large" Grid.ColumnSpan="2">Co masz dzisiaj do zrobienia?</Label>
+            <Entry Grid.Row="1" x:Name="textInput"/>
+            <Button Grid.Column="1" Grid.Row="1" Text="Dodaj" Clicked="addToList" />
+            <StackLayout Grid.Row="2" Grid.ColumnSpan="2" x:Name="list">
+                <Grid Padding="16" BackgroundColor="Gray" Margin="0, 16, 0, 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="60" />
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="120" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    <Label VerticalTextAlignment="Center" FontSize="18" Text="Przykładowe zadanie" Grid.Column="1"/>
+                    <CheckBox></CheckBox>
+                    <Button Text="Usuń" Grid.Column="2" />
+                </Grid>
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
